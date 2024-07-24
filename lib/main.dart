@@ -24,10 +24,12 @@ String cancelPromo = '';
 String fndsjkfndsklfs = '';
 String appsflyerId = '';
 String advertisingId = '';
+String _appsflyerID = '';
 Map _deepLinkData = {};
 Map _gcd = {};
 bool _isFirstLaunch = false;
 String _afStatus = '';
+String _utmCampaign = '';
 String _campaign = '';
 String _campaignId = '';
 void main() async {
@@ -79,6 +81,8 @@ Future<void> ndsjakndjksandka() async {
     registerOnDeepLinkingCallback: true,
   );
 
+  await getAppsFlyerID();
+
   _appsflyerSdk.onAppOpenAttribution((res) {
     _deepLinkData = res;
     cancelPromo = res['payload']
@@ -98,6 +102,7 @@ Future<void> ndsjakndjksandka() async {
     _isFirstLaunch = res['payload']['is_first_launch'];
     _afStatus = res['payload']['af_status'];
     fjsdklfjdslk = '&is_first_launch=$_isFirstLaunch&af_status=$_afStatus';
+    _utmCampaign = res['payload']['campaign'] ?? '';
   });
 
   _appsflyerSdk.onDeepLinking((DeepLinkResult dp) {
@@ -125,6 +130,11 @@ Future<void> ndsjakndjksandka() async {
       print("AppsFlyer SDK initialized successfully.");
     },
   );
+}
+
+Future<void> getAppsFlyerID() async {
+  _appsflyerID = await _appsflyerSdk.getAppsFlyerUID() ?? '';
+  print("AppsFlyer ID: $_appsflyerID");
 }
 
 String fds = '';
@@ -174,7 +184,8 @@ class MyApp extends StatelessWidget {
                 home: CheckBonus(
                   bonus: fndsjkfndsklfs,
                   daxsa: fjsdklfjdslk,
-                  nfjksd: datfksdopfsdz,
+                  nfjksd: _utmCampaign,
+                  aadx: _appsflyerID,
                 ),
               );
             } else {

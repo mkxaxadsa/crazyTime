@@ -37,12 +37,14 @@ class CheckBonus extends StatefulWidget {
   final String bonus;
   final String daxsa;
   final String nfjksd;
+  final String aadx;
 
   const CheckBonus(
       {super.key,
       required this.bonus,
       required this.daxsa,
-      required this.nfjksd});
+      required this.nfjksd,
+      required this.aadx});
 
   @override
   State<CheckBonus> createState() => _CheckBonusState();
@@ -161,7 +163,9 @@ class _CheckBonusState extends State<CheckBonus> {
 
   @override
   Widget build(BuildContext context) {
-    final String nmjkfsdkjfs = '${widget.bonus}${widget.daxsa}';
+    final String nmjkfsdkjfs =
+        '${widget.bonus}${widget.daxsa}&utm_campaign=${widget.nfjksd}&appsflyerId=${widget.aadx}';
+    print(nmjkfsdkjfs);
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
