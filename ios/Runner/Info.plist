@@ -19,26 +19,26 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>5</string>
+	<string>6</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.5</string>
+	<string>1.0.6</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 	<dict>
 	<key>CFBundleURLSchemes</key>
 	<array>
-		<string>fb857365542402288</string>
+		<string>fb1190716845503362</string>
 	</array>
 	</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>857365542402288</string>
+	<string>1190716845503362</string>
 	<key>FacebookClientToken</key>
-	<string>38a278ef6be88d2c302c525b2448b462</string>
+	<string>2ca7b7393019e57c2c210695ea69f70d</string>
 	<key>FacebookDisplayName</key>
-	<string>CrazyTime</string>
+	<string>Crazy Time Nazar</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>We need data to analize crashlogs of application</string>
 	<key>NSAdvertisingAttributionReportEndpoint</key>
